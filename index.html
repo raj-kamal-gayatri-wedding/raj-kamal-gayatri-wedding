@@ -1,0 +1,1088 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#350d20">
+
+<title>Raj Kamal & Gayatri | Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --wine: #350d20;
+    --burgundy: #641b38;
+    --gold: #d9b56d;
+    --cream: #fff8ed;
+    --soft: #f3dfc5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--wine);
+    color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 90px 8%;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--gold);
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(42px, 7vw, 68px);
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--soft);
+    margin-bottom: 45px;
+}
+
+.gold-line {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 25px auto;
+}
+
+/* INTRO ENVELOPE */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #762d49, #260713 75%);
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+#intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-content {
+    padding: 25px;
+}
+
+.intro-caption {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.envelope {
+    position: relative;
+    width: min(300px, 75vw);
+    height: 190px;
+    background: #b98257;
+    border: 2px solid var(--gold);
+    margin: auto;
+    box-shadow: 0 15px 50px #0008;
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 148px solid transparent;
+    border-right: 148px solid transparent;
+    border-top: 105px solid #d6a16f;
+    transform-origin: top;
+    transition: transform .8s;
+    z-index: 3;
+}
+
+.envelope.open::before {
+    transform: rotateX(180deg);
+}
+
+.envelope::after {
+    content: "♥";
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--wine);
+    font-size: 30px;
+    z-index: 4;
+}
+
+.envelope-label {
+    position: absolute;
+    top: 115px;
+    width: 100%;
+    color: #481728;
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+}
+
+.open-button {
+    margin-top: 35px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 13px 35px;
+    letter-spacing: 3px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.open-button:hover {
+    background: var(--gold);
+    color: var(--wine);
+}
+
+/* HERO */
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background:
+        linear-gradient(#250713bd, #250713d9),
+        radial-gradient(circle at center, #84334e, #310b1c 75%);
+}
+
+.hero-border {
+    position: absolute;
+    inset: 20px;
+    border: 1px solid #d9b56d80;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: rise 1.5s ease both;
+}
+
+.hero-top {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 6px;
+    margin-bottom: 35px;
+}
+
+.hero-small {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.couple-name {
+    color: var(--gold);
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 12vw, 125px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.and {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    color: var(--cream);
+    margin: 4px 0;
+}
+
+.hero-date {
+    margin-top: 30px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    line-height: 2;
+}
+
+.hero-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--soft);
+    margin-top: 25px;
+}
+
+.scroll-link {
+    display: inline-block;
+    margin-top: 45px;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    animation: bounce 2s infinite;
+}
+
+/* PARTICLES */
+
+.particle {
+    position: fixed;
+    top: -20px;
+    color: var(--gold);
+    pointer-events: none;
+    z-index: 10;
+    opacity: .7;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* INVITATION */
+
+#invitation {
+    text-align: center;
+    background: var(--cream);
+    color: #572039;
+}
+
+#invitation .section-title {
+    color: #81354e;
+}
+
+.invitation-text {
+    max-width: 750px;
+    margin: auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1.85;
+}
+
+.invitation-heart {
+    font-size: 32px;
+    color: #a44c61;
+    margin: 25px;
+}
+
+.family-name {
+    color: #81354e;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    margin-top: 25px;
+}
+
+/* COUNTDOWN */
+
+#countdown-section {
+    text-align: center;
+    background: linear-gradient(135deg, #4c122a, #270914);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.time-box {
+    width: 125px;
+    padding: 25px 10px;
+    border: 1px solid #d9b56d80;
+    background: #ffffff08;
+}
+
+.time-number {
+    display: block;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+}
+
+.time-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--soft);
+}
+
+.countdown-message {
+    margin-top: 30px;
+    font-family: 'Great Vibes', cursive;
+    color: var(--gold);
+    font-size: 38px;
+}
+
+/* EVENTS */
+
+#events {
+    background: linear-gradient(135deg, #300b1b, #601b35);
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.event-card {
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid #d9b56d80;
+    background: #ffffff08;
+    transition: .4s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    background: #ffffff12;
+}
+
+.event-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.event-card p {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--soft);
+}
+
+/* VENUE */
+
+#venue {
+    background: var(--cream);
+    color: #572039;
+    text-align: center;
+}
+
+#venue .section-title {
+    color: #81354e;
+}
+
+.venue-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.venue-address {
+    font-size: 14px;
+    line-height: 2;
+    max-width: 600px;
+    margin: auto;
+}
+
+.venue-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 14px 23px;
+    border: 1px solid #81354e;
+    color: #81354e;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.action-button:hover {
+    background: #81354e;
+    color: white;
+}
+
+/* CONTACT */
+
+#contact {
+    text-align: center;
+    background: #fff8ed;
+    color: #572039;
+}
+
+#contact .section-title {
+    color: #81354e;
+}
+
+.contact-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #641b38;
+    color: white;
+    padding: 14px 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.contact-button:hover {
+    background: #9b4560;
+}
+
+/* CLOSING */
+
+#closing {
+    text-align: center;
+    background: radial-gradient(circle, #71253f, #270914 75%);
+}
+
+.closing-text {
+    max-width: 650px;
+    margin: auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1.8;
+}
+
+.closing-names {
+    font-family: 'Great Vibes', cursive;
+    color: var(--gold);
+    font-size: clamp(48px, 9vw, 85px);
+    margin: 30px 0;
+}
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: #200510;
+    color: #c9a979;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .9s ease, transform .9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    section {
+        padding: 75px 7%;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .time-box {
+        width: 105px;
+        padding: 20px 5px;
+    }
+
+    .time-number {
+        font-size: 40px;
+    }
+
+    .hero-border {
+        inset: 12px;
+    }
+
+    .hero-top {
+        letter-spacing: 3px;
+    }
+
+    .hero-date {
+        letter-spacing: 2px;
+    }
+
+    .invitation-text {
+        font-size: 21px;
+    }
+
+    .venue-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .action-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING ENVELOPE -->
+
+<div id="intro">
+    <div class="intro-content">
+        <div class="intro-caption">A SPECIAL INVITATION</div>
+
+        <div class="envelope" id="envelope">
+            <div class="envelope-label">With Love</div>
+        </div>
+
+        <button class="open-button" onclick="openInvitation()">
+            OPEN INVITATION
+        </button>
+    </div>
+</div>
+
+<!-- HERO -->
+
+<section id="hero">
+
+    <div class="hero-border"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-top">
+            YOU ARE CORDIALLY INVITED
+        </div>
+
+        <div class="hero-small">
+            THE WEDDING CELEBRATION OF
+        </div>
+
+        <h1 class="couple-name">Raj Kamal Neog</h1>
+
+        <div class="and">&</div>
+
+        <h1 class="couple-name">Gayatri Gogoi</h1>
+
+        <div class="gold-line"></div>
+
+        <div class="hero-date">
+            WEDNESDAY · 25 NOVEMBER 2026
+            <br>
+            1:00 PM ONWARDS
+        </div>
+
+        <div class="hero-message">
+            Two hearts. One beautiful journey.
+        </div>
+
+        <a href="#invitation" class="scroll-link">
+            SCROLL TO EXPLORE ↓
+        </a>
+
+    </div>
+</section>
+
+<!-- INVITATION MESSAGE -->
+
+<section id="invitation">
+
+    <div class="reveal">
+
+        <h2 class="section-title">Together With Our Families</h2>
+
+        <div class="section-subtitle" style="color:#81354e">
+            A celebration of love and togetherness
+        </div>
+
+        <div class="invitation-heart">♥</div>
+
+        <div class="invitation-text">
+
+            With hearts full of joy and gratitude,
+            we cordially invite you to celebrate the wedding of
+
+            <br><br>
+
+            <strong>Raj Kamal Neog & Gayatri Gogoi</strong>
+
+            <br><br>
+
+            As two hearts come together to begin a beautiful
+            journey of love, companionship and togetherness,
+            your presence and blessings would make our special
+            day even more memorable.
+
+            <br><br>
+
+            Please join us as we celebrate this wonderful
+            occasion and bless the couple with happiness,
+            love and prosperity.
+
+            <br><br>
+
+            Your presence is our greatest gift.
+            We look forward to celebrating this beautiful
+            beginning with you!
+
+        </div>
+
+        <div class="family-name">
+            With love and warm regards,
+            <br>
+            The Neog & Gogoi Families
+        </div>
+
+    </div>
+</section>
+
+<!-- COUNTDOWN -->
+
+<section id="countdown-section">
+
+    <div class="reveal">
+
+        <h2 class="section-title">Counting Every Moment</h2>
+
+        <div class="section-subtitle">
+            Until the beautiful day
+        </div>
+
+        <div class="countdown">
+
+            <div class="time-box">
+                <span class="time-number" id="days">00</span>
+                <span class="time-label">DAYS</span>
+            </div>
+
+            <div class="time-box">
+                <span class="time-number" id="hours">00</span>
+                <span class="time-label">HOURS</span>
+            </div>
+
+            <div class="time-box">
+                <span class="time-number" id="minutes">00</span>
+                <span class="time-label">MINUTES</span>
+            </div>
+
+            <div class="time-box">
+                <span class="time-number" id="seconds">00</span>
+                <span class="time-label">SECONDS</span>
+            </div>
+
+        </div>
+
+        <div class="countdown-message" id="countdown-message">
+            The celebration awaits...
+        </div>
+
+    </div>
+</section>
+
+<!-- WEDDING EVENTS -->
+
+<section id="events">
+
+    <div class="reveal">
+
+        <h2 class="section-title">The Celebration</h2>
+
+        <div class="section-subtitle">
+            A day filled with love and happiness
+        </div>
+
+        <div class="event-grid">
+
+            <div class="event-card">
+
+                <div class="event-icon">💍</div>
+
+                <h3>Wedding Ceremony</h3>
+
+                <p>
+                    Wednesday, 25 November 2026
+                    <br>
+                    1:00 PM onwards
+                    <br>
+                    Aarunya Country Resort
+                </p>
+
+            </div>
+
+            <div class="event-card">
+
+                <div class="event-icon">♥</div>
+
+                <h3>Celebration & Blessings</h3>
+
+                <p>
+                    Join us to celebrate this special
+                    beginning and bless the couple
+                    with love and happiness.
+                    <br>
+                    25 November 2026
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- VENUE -->
+
+<section id="venue">
+
+    <div class="reveal">
+
+        <h2 class="section-title">The Wedding Venue</h2>
+
+        <div class="section-subtitle" style="color:#81354e">
+            We can't wait to welcome you
+        </div>
+
+        <div class="venue-name">
+            Aarunya Country Resort
+        </div>
+
+        <div class="gold-line"></div>
+
+        <div class="venue-address">
+
+            Athabari Polytechnic Road,
+            <br>
+            Maijan Borsaikia Gaon,
+            <br>
+            Mohanabari – 786012
+
+        </div>
+
+        <div class="venue-buttons">
+
+            <a
+                class="action-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012"
+            >
+                📍 GET DIRECTIONS
+            </a>
+
+            <a
+                class="action-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.google.com/maps/search/?api=1&query=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012"
+            >
+                🗺 VIEW ON GOOGLE MAPS
+            </a>
+
+            <a
+                class="action-button"
+                href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012&travelmode=driving"
+            >
+                🚗 FIND DISTANCE & TRAVEL TIME
+            </a>
+
+        </div>
+
+        <p style="margin-top:25px;font-size:12px;line-height:1.8">
+            Google Maps will calculate the distance and
+            estimated travel time from your starting location.
+        </p>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="reveal">
+
+        <h2 class="section-title">For Any Enquiries</h2>
+
+        <div class="section-subtitle" style="color:#81354e">
+            We are happy to help
+        </div>
+
+        <p>
+            For wedding-related information,
+            please feel free to contact us.
+        </p>
+
+        <div class="contact-number">
+            8876772699
+        </div>
+
+        <a class="contact-button" href="tel:8876772699">
+            ☎ CALL WEDDING CONTACT
+        </a>
+
+        <br><br>
+
+        <a
+            class="contact-button"
+            style="background:#287b54"
+            href="https://wa.me/918876772699?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20wedding%20of%20Raj%20Kamal%20Neog%20and%20Gayatri%20Gogoi."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            MESSAGE ON WHATSAPP
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CLOSING -->
+
+<section id="closing">
+
+    <div class="reveal">
+
+        <h2 class="section-title">Your Presence Means Everything</h2>
+
+        <div class="closing-text">
+
+            We would be honoured to have you with us
+            as we celebrate a new chapter of love,
+            happiness and togetherness.
+
+            <br><br>
+
+            Come with your blessings.
+            Leave with beautiful memories.
+
+        </div>
+
+        <div class="closing-names">
+            Raj Kamal & Gayatri
+        </div>
+
+        <div class="gold-line"></div>
+
+        <p style="letter-spacing:3px;font-size:11px;color:#e9d1ae">
+            25 NOVEMBER 2026 · 1:00 PM ONWARDS
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    MADE WITH LOVE FOR RAJ KAMAL & GAYATRI
+    <br><br>
+    © 2026 · WEDDING CELEBRATION
+</footer>
+
+<script>
+
+/* OPEN INVITATION */
+
+function openInvitation() {
+
+    const envelope = document.getElementById("envelope");
+
+    envelope.classList.add("open");
+
+    setTimeout(() => {
+        document.getElementById("intro").classList.add("hide");
+    }, 650);
+
+}
+
+/* LIVE WEDDING COUNTDOWN */
+
+/*
+  25 November 2026
+  1:00 PM Indian Standard Time
+  UTC +05:30
+*/
+
+const weddingDate = new Date(
+    "2026-11-25T13:00:00+05:30"
+).getTime();
+
+function updateCountdown() {
+
+    const now = Date.now();
+
+    const difference = weddingDate - now;
+
+    if (difference <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        document.getElementById("countdown-message").textContent =
+            "The Big Day Is Here! ♥";
+
+        return;
+    }
+
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown, 1000);
+
+/* FLOATING GOLD PARTICLES */
+
+function createParticle() {
+
+    const particle = document.createElement("div");
+
+    particle.className = "particle";
+
+    particle.textContent =
+        Math.random() > 0.5 ? "✦" : "✧";
+
+    particle.style.left =
+        Math.random() * 100 + "vw";
+
+    particle.style.fontSize =
+        (Math.random() * 12 + 8) + "px";
+
+    const duration = Math.random() * 5 + 5;
+
+    particle.style.animationDuration =
+        duration + "s";
+
+    document.body.appendChild(particle);
+
+    setTimeout(() => {
+        particle.remove();
+    }, duration * 1000);
+
+}
+
+setInterval(createParticle, 450);
+
+/* SCROLL REVEAL ANIMATION */
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+
+</body>
+</html>
