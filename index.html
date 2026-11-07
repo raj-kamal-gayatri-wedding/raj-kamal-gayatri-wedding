@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#350d20">
+<meta name="theme-color" content="#fffaf3">
 <title>Raj Kamal & Gayatri | Wedding Invitation</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,12 +12,13 @@
 
 <style>
 :root {
-    --wine: #6b3448;
-    --burgundy: #8b5367;
+    --cream: #fffaf3;
+    --ivory: #f8f0e5;
+    --blush: #f1e1d9;
     --gold: #b58a50;
-    --cream: #fffaf5;
-    --soft: #725c5d;
-    --background: linear-gradient(135deg, #fffaf5 0%, #f8eee8 52%, #f2e2dc 100%);
+    --brown: #765b4d;
+    --text: #75615a;
+    --border: #dfc9ad;
 }
 
 * {
@@ -32,8 +33,8 @@ html {
 
 body {
     font-family: 'Lato', sans-serif;
-    background: #fffaf5;
-    color: #654b50;
+    background: var(--cream);
+    color: var(--text);
     overflow-x: hidden;
 }
 
@@ -42,35 +43,36 @@ a {
 }
 
 section {
-    padding: 90px 8%;
+    padding: 55px 7%;
     position: relative;
+    background: var(--cream);
+    text-align: center;
 }
 
 .section-title {
-    text-align: center;
-    color: #9b6c48;
     font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 7vw, 68px);
-    margin-bottom: 12px;
+    color: var(--gold);
+    font-size: clamp(27px, 5vw, 39px);
+    font-weight: 500;
+    margin-bottom: 9px;
 }
 
 .section-subtitle {
-    text-align: center;
-    font-size: 11px;
-    letter-spacing: 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--soft);
-    margin-bottom: 45px;
+    color: var(--text);
+    margin-bottom: 25px;
 }
 
 .gold-line {
-    width: 80px;
+    width: 55px;
     height: 1px;
     background: var(--gold);
-    margin: 25px auto;
+    margin: 18px auto;
 }
 
-/* INTRO ENVELOPE */
+/* OPENING ENVELOPE */
 
 #intro {
     position: fixed;
@@ -80,8 +82,8 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #fffdf9 0%, #f5e7df 75%);
-    transition: opacity 1s ease, visibility 1s ease;
+    background: radial-gradient(circle, #fffdf9, #f0dfd3);
+    transition: opacity .8s ease, visibility .8s ease;
 }
 
 #intro.hide {
@@ -91,30 +93,30 @@ section {
 }
 
 .intro-content {
-    padding: 25px;
+    padding: 20px;
 }
 
 .intro-caption {
     color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
 }
 
 .envelope {
     position: relative;
-    width: min(300px, 75vw);
-    height: 190px;
-    background: #d8b99e;
-    border: 2px solid var(--gold);
+    width: min(230px, 70vw);
+    height: 145px;
+    background: #ddc4ad;
+    border: 1px solid var(--gold);
     margin: auto;
-    box-shadow: 0 15px 50px #0008;
+    box-shadow: 0 8px 25px #765b4d18;
     cursor: pointer;
-    transition: transform .4s;
+    transition: transform .3s;
 }
 
 .envelope:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .envelope::before {
@@ -122,11 +124,11 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    border-left: 148px solid transparent;
-    border-right: 148px solid transparent;
-    border-top: 105px solid #ead1bb;
+    border-left: 114px solid transparent;
+    border-right: 114px solid transparent;
+    border-top: 78px solid #ead8c5;
     transform-origin: top;
-    transition: transform .8s;
+    transition: transform .7s;
     z-index: 3;
 }
 
@@ -137,33 +139,32 @@ section {
 .envelope::after {
     content: "♥";
     position: absolute;
-    top: 75px;
+    top: 55px;
     left: 50%;
     transform: translateX(-50%);
-    color: #70495a;
-    font-size: 30px;
+    color: #9b745c;
+    font-size: 23px;
     z-index: 4;
 }
 
 .envelope-label {
     position: absolute;
-    top: 115px;
+    top: 87px;
     width: 100%;
-    color: #70495a;
+    color: #765b4d;
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
+    font-size: 23px;
 }
 
 .open-button {
-    margin-top: 35px;
+    margin-top: 25px;
     background: transparent;
     border: 1px solid var(--gold);
-    color: #91683f;
-    padding: 13px 35px;
-    letter-spacing: 3px;
-    font-size: 11px;
+    color: var(--brown);
+    padding: 10px 25px;
+    letter-spacing: 2px;
+    font-size: 10px;
     cursor: pointer;
-    transition: .3s;
 }
 
 .open-button:hover {
@@ -174,84 +175,96 @@ section {
 /* HERO */
 
 #hero {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    background: linear-gradient(135deg, #fffaf3, #f4e9df);
     overflow: hidden;
-    background: var(--background);
 }
 
 .hero-border {
     position: absolute;
-    inset: 20px;
-    border: 1px solid #b58a5080;
+    inset: 15px;
+    border: 1px solid #b58a5060;
     pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
-    animation: rise 1.5s ease both;
+    max-width: 650px;
+    animation: rise 1.2s ease both;
 }
 
 .hero-top {
-    color: #9b6c48;
-    font-size: 11px;
-    letter-spacing: 6px;
-    margin-bottom: 35px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
 }
 
 .hero-small {
     font-family: 'Playfair Display', serif;
-    font-size: 23px;
-    letter-spacing: 3px;
+    font-size: 16px;
+    letter-spacing: 2px;
     margin-bottom: 12px;
-    color: var(--soft);
 }
 
 .couple-name {
-    color: #9b6c48;
+    color: #98734e;
     font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 9vw, 90px);
+    font-size: clamp(37px, 8vw, 72px);
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .and {
     font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    color: var(--soft);
-    margin: 4px 0;
+    font-size: 35px;
+    color: #a98778;
+    margin: 2px 0;
 }
 
 .hero-date {
-    margin-top: 30px;
-    font-size: 12px;
-    letter-spacing: 4px;
+    margin-top: 22px;
+    font-size: 11px;
+    letter-spacing: 2px;
     line-height: 2;
-    color: var(--soft);
 }
 
 .hero-message {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: var(--soft);
-    margin-top: 25px;
+    font-size: 18px;
+    margin-top: 16px;
 }
 
 .scroll-link {
     display: inline-block;
-    margin-top: 45px;
-    color: #9b6c48;
-    font-size: 11px;
-    letter-spacing: 3px;
+    margin-top: 30px;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
     animation: bounce 2s infinite;
 }
 
-/* PARTICLES */
+/* ANIMATIONS */
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(7px); }
+}
 
 .particle {
     position: fixed;
@@ -259,7 +272,7 @@ section {
     color: var(--gold);
     pointer-events: none;
     z-index: 10;
-    opacity: .7;
+    opacity: .6;
     animation: fall linear forwards;
 }
 
@@ -270,259 +283,232 @@ section {
     }
 }
 
-@keyframes rise {
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-}
-
-/* COMMON SECTION BACKGROUNDS */
-
-#intro, #hero, #invitation, #countdown-section,
-#events, #venue, #contact, #closing {
-    background: var(--background);
-    color: #654b50;
-}
-
 /* INVITATION */
 
 #invitation {
-    text-align: center;
+    background: var(--ivory);
 }
 
 .invitation-text {
-    max-width: 750px;
+    max-width: 570px;
     margin: auto;
     font-family: 'Playfair Display', serif;
-    font-size: 25px;
-    line-height: 1.5;
-    color: var(--soft);
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--text);
 }
 
 .invitation-heart {
-    font-size: 32px;
-    color: #b77d82;
-    margin: 16px 0;
+    font-size: 23px;
+    color: #bb8b82;
+    margin: 14px;
 }
 
 .family-name {
-    color: #9b6c48;
+    color: var(--gold);
     font-family: 'Playfair Display', serif;
-    font-size: 23px;
-    margin-top: 25px;
+    font-size: 17px;
+    margin-top: 20px;
 }
 
 /* COUNTDOWN */
 
 #countdown-section {
-    text-align: center;
+    background: #f5eae0;
 }
 
 .countdown {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
-    gap: clamp(5px, 2vw, 16px);
-    width: 100%;
+    gap: 10px;
+    max-width: 430px;
+    margin: auto;
 }
 
 .time-box {
-    flex: 1 1 0;
+    flex: 1;
     min-width: 0;
-    width: auto;
-    padding: 20px 4px;
-    background: #ffffffa8;
-    border: 1px solid #c9a77c80;
-    box-shadow: 0 8px 24px #77534a0d;
+    padding: 15px 5px;
+    border: 1px solid var(--border);
+    background: #fffdf9;
+    border-radius: 5px;
+    box-shadow: 0 3px 12px #765b4d0a;
 }
 
 .time-number {
     display: block;
-    color: #9b6c48;
+    color: var(--gold);
     font-family: 'Playfair Display', serif;
-    font-size: clamp(25px, 7vw, 48px);
-    line-height: 1.15;
+    font-size: clamp(23px, 5vw, 35px);
 }
 
 .time-label {
-    font-family: 'Lato', sans-serif;
-    font-size: clamp(8px, 2vw, 10px);
-    letter-spacing: clamp(0.5px, 0.6vw, 2px);
-    white-space: nowrap;
-    color: var(--soft);
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--text);
 }
 
 .countdown-message {
-    margin-top: 30px;
+    margin-top: 22px;
     font-family: 'Playfair Display', serif;
-    color: #9b6c48;
-    font-size: 38px;
+    color: var(--gold);
+    font-size: 25px;
 }
 
 /* EVENTS */
 
 #events {
-    background: var(--background);
+    background: var(--cream);
 }
 
 .event-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 850px;
+    gap: 15px;
+    max-width: 650px;
     margin: auto;
 }
 
 .event-card {
-    padding: 40px 20px;
+    padding: 25px 15px;
     text-align: center;
-    border: 1px solid #c9a77c80;
-    background: #ffffffa8;
-    box-shadow: 0 8px 24px #77534a0d;
-    transition: .4s;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fffdf9;
+    transition: .3s;
 }
 
 .event-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px #765b4d12;
 }
 
 .event-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .event-card h3 {
-    color: #9b6c48;
+    color: var(--gold);
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    margin-bottom: 12px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .event-card p {
-    font-size: 13px;
-    line-height: 2;
-    color: var(--soft);
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text);
 }
 
 /* VENUE */
 
 #venue {
-    text-align: center;
+    background: var(--ivory);
 }
 
 .venue-name {
     font-family: 'Playfair Display', serif;
-    font-size: 35px;
-    margin-bottom: 15px;
-    color: #9b6c48;
+    font-size: 26px;
+    color: var(--gold);
+    margin-bottom: 10px;
 }
 
 .venue-address {
-    font-size: 14px;
-    line-height: 2;
-    max-width: 600px;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 450px;
     margin: auto;
-    color: var(--soft);
 }
 
 .venue-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 30px;
+    gap: 9px;
+    margin-top: 22px;
 }
 
 .action-button {
     display: inline-block;
-    padding: 14px 23px;
-    border: 1px solid #a87968;
-    color: #805766;
-    font-size: 11px;
-    letter-spacing: 1px;
+    padding: 11px 16px;
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: .5px;
     transition: .3s;
 }
 
 .action-button:hover {
-    background: #a87968;
-    color: #fffaf5;
+    background: var(--gold);
+    color: white;
 }
 
 /* CONTACT */
 
 #contact {
-    text-align: center;
+    background: var(--cream);
 }
 
 .contact-number {
     font-family: 'Playfair Display', serif;
-    font-size: 35px;
-    margin: 20px 0;
-    letter-spacing: 2px;
-    color: #9b6c48;
+    font-size: 27px;
+    margin: 15px 0;
+    color: var(--gold);
 }
 
 .contact-button {
     display: inline-block;
-    background: #8b5367;
+    background: #a77e68;
     color: white;
-    padding: 14px 30px;
-    font-size: 12px;
-    letter-spacing: 2px;
+    padding: 11px 22px;
+    border-radius: 3px;
+    font-size: 10px;
+    letter-spacing: 1px;
     transition: .3s;
 }
 
 .contact-button:hover {
-    background: #a66d7d;
+    background: #89634f;
 }
 
 /* CLOSING */
 
 #closing {
-    text-align: center;
+    background: linear-gradient(135deg, #f5e9df, #fffaf3);
 }
 
 .closing-text {
-    max-width: 650px;
+    max-width: 480px;
     margin: auto;
     font-family: 'Playfair Display', serif;
-    font-size: 25px;
-    line-height: 1.5;
-    color: var(--soft);
+    font-size: 19px;
+    line-height: 1.7;
 }
 
 .closing-names {
     font-family: 'Playfair Display', serif;
-    color: #9b6c48;
-    font-size: clamp(40px, 9vw, 85px);
-    margin: 30px 0;
+    color: var(--gold);
+    font-size: clamp(35px, 7vw, 60px);
+    margin: 22px 0;
 }
 
 footer {
-    padding: 22px;
+    padding: 17px;
     text-align: center;
-    background: #ead8cf;
-    color: #76565b;
-    font-size: 10px;
-    letter-spacing: 2px;
+    background: #eadbce;
+    color: #765b4d;
+    font-size: 9px;
+    letter-spacing: 1.5px;
 }
 
 /* SCROLL REVEAL */
 
 .reveal {
     opacity: 0;
-    transform: translateY(35px);
-    transition: opacity .9s ease, transform .9s ease;
+    transform: translateY(20px);
+    transition: opacity .7s ease, transform .7s ease;
 }
 
 .reveal.visible {
@@ -532,47 +518,58 @@ footer {
 
 /* MOBILE */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
+
     section {
-        padding: 75px 7%;
+        padding: 42px 6%;
     }
 
-    .event-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .time-box {
-        flex: 1 1 0;
-        min-width: 0;
-        padding: 14px 2px;
-        background: #ffffffc9;
-    }
-
-    .time-number {
-        font-size: clamp(23px, 7.5vw, 34px);
-    }
-
-    .time-label {
-        font-size: 8px;
-        letter-spacing: 0;
+    #hero {
+        min-height: 82vh;
     }
 
     .hero-border {
-        inset: 12px;
+        inset: 10px;
     }
 
     .hero-top {
-        letter-spacing: 3px;
+        letter-spacing: 2px;
+    }
+
+    .hero-small {
+        font-size: 13px;
+    }
+
+    .couple-name {
+        font-size: clamp(34px, 9vw, 52px);
     }
 
     .hero-date {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        letter-spacing: 1px;
+        font-size: 9px;
+        margin-bottom: 20px;
     }
 
     .invitation-text,
     .closing-text {
-        font-size: 21px;
-        line-height: 1.5;
+        font-size: 17px;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+    }
+
+    .event-card {
+        padding: 20px 12px;
     }
 
     .venue-buttons {
@@ -582,12 +579,24 @@ footer {
 
     .action-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 260px;
     }
 
     .countdown {
-        flex-wrap: nowrap;
-        gap: 5px;
+        gap: 6px;
+    }
+
+    .time-box {
+        padding: 12px 3px;
+    }
+
+    .time-number {
+        font-size: 25px;
+    }
+
+    .time-label {
+        font-size: 8px;
+        letter-spacing: 0;
     }
 }
 
@@ -607,7 +616,10 @@ footer {
 
 <div id="intro">
     <div class="intro-content">
-        <div class="intro-caption">A SPECIAL INVITATION</div>
+
+        <div class="intro-caption">
+            A SPECIAL INVITATION
+        </div>
 
         <div class="envelope" id="envelope">
             <div class="envelope-label">With Love</div>
@@ -616,12 +628,14 @@ footer {
         <button class="open-button" onclick="openInvitation()">
             OPEN INVITATION
         </button>
+
     </div>
 </div>
 
 <!-- HERO -->
 
 <section id="hero">
+
     <div class="hero-border"></div>
 
     <div class="hero-content">
@@ -659,12 +673,15 @@ footer {
     </div>
 </section>
 
-<!-- INVITATION MESSAGE -->
+<!-- INVITATION -->
 
 <section id="invitation">
+
     <div class="reveal">
 
-        <h2 class="section-title">Together With Our Families</h2>
+        <h2 class="section-title">
+            Together With Our Families
+        </h2>
 
         <div class="section-subtitle">
             A celebration of love and togetherness
@@ -687,14 +704,18 @@ footer {
         </div>
 
     </div>
+
 </section>
 
 <!-- COUNTDOWN -->
 
 <section id="countdown-section">
+
     <div class="reveal">
 
-        <h2 class="section-title">Counting Every Moment</h2>
+        <h2 class="section-title">
+            Counting Every Moment
+        </h2>
 
         <div class="section-subtitle">
             Until the beautiful day
@@ -729,14 +750,18 @@ footer {
         </div>
 
     </div>
+
 </section>
 
-<!-- WEDDING EVENTS -->
+<!-- EVENTS -->
 
 <section id="events">
+
     <div class="reveal">
 
-        <h2 class="section-title">The Celebration</h2>
+        <h2 class="section-title">
+            The Celebration
+        </h2>
 
         <div class="section-subtitle">
             A day filled with love and happiness
@@ -779,14 +804,18 @@ footer {
         </div>
 
     </div>
+
 </section>
 
 <!-- VENUE -->
 
 <section id="venue">
+
     <div class="reveal">
 
-        <h2 class="section-title">The Wedding Venue</h2>
+        <h2 class="section-title">
+            The Wedding Venue
+        </h2>
 
         <div class="section-subtitle">
             We can't wait to welcome you
@@ -828,6 +857,8 @@ footer {
 
             <a
                 class="action-button"
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012&travelmode=driving"
             >
                 🚗 FIND DISTANCE & TRAVEL TIME
@@ -835,26 +866,30 @@ footer {
 
         </div>
 
-        <p style="margin-top:25px;font-size:12px;line-height:1.8">
+        <p style="margin-top:18px;font-size:11px;line-height:1.7">
             Google Maps will calculate the distance and
             estimated travel time from your starting location.
         </p>
 
     </div>
+
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
+
     <div class="reveal">
 
-        <h2 class="section-title">For Any Enquiries</h2>
+        <h2 class="section-title">
+            For Any Enquiries
+        </h2>
 
         <div class="section-subtitle">
             We are happy to help
         </div>
 
-        <p>
+        <p style="font-size:13px;line-height:1.8">
             For wedding-related information,
             please feel free to contact us.
         </p>
@@ -871,7 +906,7 @@ footer {
 
         <a
             class="contact-button"
-            style="background:#287b54"
+            style="background:#718b70"
             href="https://wa.me/918876772699?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20wedding%20of%20Raj%20Kamal%20Neog%20and%20Gayatri%20Gogoi."
             target="_blank"
             rel="noopener noreferrer"
@@ -880,14 +915,18 @@ footer {
         </a>
 
     </div>
+
 </section>
 
 <!-- CLOSING -->
 
 <section id="closing">
+
     <div class="reveal">
 
-        <h2 class="section-title">Your Presence Means Everything</h2>
+        <h2 class="section-title">
+            Your Presence Means Everything
+        </h2>
 
         <div class="closing-text">
 
@@ -908,11 +947,12 @@ footer {
 
         <div class="gold-line"></div>
 
-        <p style="letter-spacing:3px;font-size:11px;color:#9b6c48">
+        <p style="letter-spacing:2px;font-size:10px;color:#98734e">
             25 NOVEMBER 2026 · 1:00 PM ONWARDS
         </p>
 
     </div>
+
 </section>
 
 <footer>
@@ -937,7 +977,7 @@ function openInvitation() {
 
 }
 
-/* LIVE WEDDING COUNTDOWN */
+/* WEDDING COUNTDOWN */
 
 const weddingDate = new Date(
     "2026-11-25T13:00:00+05:30"
@@ -946,7 +986,6 @@ const weddingDate = new Date(
 function updateCountdown() {
 
     const now = Date.now();
-
     const difference = weddingDate - now;
 
     if (difference <= 0) {
@@ -1011,7 +1050,7 @@ function createParticle() {
         Math.random() * 100 + "vw";
 
     particle.style.fontSize =
-        (Math.random() * 12 + 8) + "px";
+        (Math.random() * 9 + 7) + "px";
 
     const duration = Math.random() * 5 + 5;
 
@@ -1026,9 +1065,9 @@ function createParticle() {
 
 }
 
-setInterval(createParticle, 450);
+setInterval(createParticle, 700);
 
-/* SCROLL REVEAL ANIMATION */
+/* SCROLL REVEAL */
 
 const observer = new IntersectionObserver(
     (entries) => {
