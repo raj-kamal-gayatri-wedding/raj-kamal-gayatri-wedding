@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#350d20">
-
 <title>Raj Kamal & Gayatri | Wedding Invitation</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +12,12 @@
 
 <style>
 :root {
-    --wine: #350d20;
-    --burgundy: #641b38;
-    --gold: #d9b56d;
-    --cream: #fff8ed;
-    --soft: #f3dfc5;
-    --background: radial-gradient(circle at center, #762d49, #260713 75%);
+    --wine: #6b3448;
+    --burgundy: #8b5367;
+    --gold: #b58a50;
+    --cream: #fffaf5;
+    --soft: #725c5d;
+    --background: linear-gradient(135deg, #fffaf5 0%, #f8eee8 52%, #f2e2dc 100%);
 }
 
 * {
@@ -33,9 +31,9 @@ html {
 }
 
 body {
-    background: var(--wine);
-    color: var(--cream);
     font-family: 'Lato', sans-serif;
+    background: #fffaf5;
+    color: #654b50;
     overflow-x: hidden;
 }
 
@@ -44,31 +42,25 @@ a {
 }
 
 section {
-    padding: 80px 8%;
+    padding: 90px 8%;
     position: relative;
-    background: var(--background);
-    color: var(--cream);
-    text-align: center;
 }
 
 .section-title {
     text-align: center;
-    color: var(--gold);
+    color: #9b6c48;
     font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 5vw, 48px);
-    font-weight: 500;
+    font-size: clamp(42px, 7vw, 68px);
     margin-bottom: 12px;
 }
 
 .section-subtitle {
     text-align: center;
-    font-family: 'Lato', sans-serif;
     font-size: 11px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--soft);
-    margin-bottom: 35px;
-    line-height: 1.7;
+    margin-bottom: 45px;
 }
 
 .gold-line {
@@ -88,7 +80,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--background);
+    background: radial-gradient(circle at center, #fffdf9 0%, #f5e7df 75%);
     transition: opacity 1s ease, visibility 1s ease;
 }
 
@@ -113,7 +105,7 @@ section {
     position: relative;
     width: min(300px, 75vw);
     height: 190px;
-    background: #b98257;
+    background: #d8b99e;
     border: 2px solid var(--gold);
     margin: auto;
     box-shadow: 0 15px 50px #0008;
@@ -132,7 +124,7 @@ section {
     left: 0;
     border-left: 148px solid transparent;
     border-right: 148px solid transparent;
-    border-top: 105px solid #d6a16f;
+    border-top: 105px solid #ead1bb;
     transform-origin: top;
     transition: transform .8s;
     z-index: 3;
@@ -148,7 +140,7 @@ section {
     top: 75px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--wine);
+    color: #70495a;
     font-size: 30px;
     z-index: 4;
 }
@@ -157,16 +149,16 @@ section {
     position: absolute;
     top: 115px;
     width: 100%;
-    color: #481728;
+    color: #70495a;
     font-family: 'Playfair Display', serif;
-    font-size: 25px;
+    font-size: 32px;
 }
 
 .open-button {
     margin-top: 35px;
     background: transparent;
     border: 1px solid var(--gold);
-    color: var(--gold);
+    color: #91683f;
     padding: 13px 35px;
     letter-spacing: 3px;
     font-size: 11px;
@@ -176,7 +168,7 @@ section {
 
 .open-button:hover {
     background: var(--gold);
-    color: var(--wine);
+    color: white;
 }
 
 /* HERO */
@@ -186,13 +178,15 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     overflow: hidden;
+    background: var(--background);
 }
 
 .hero-border {
     position: absolute;
     inset: 20px;
-    border: 1px solid #d9b56d80;
+    border: 1px solid #b58a5080;
     pointer-events: none;
 }
 
@@ -204,52 +198,54 @@ section {
 }
 
 .hero-top {
-    color: var(--gold);
+    color: #9b6c48;
     font-size: 11px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
+    letter-spacing: 6px;
+    margin-bottom: 35px;
 }
 
 .hero-small {
     font-family: 'Playfair Display', serif;
-    font-size: 19px;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    color: var(--soft);
 }
 
 .couple-name {
-    color: var(--gold);
+    color: #9b6c48;
     font-family: 'Playfair Display', serif;
-    font-size: clamp(38px, 8vw, 75px);
-    font-weight: 500;
-    line-height: 1.3;
+    font-size: clamp(40px, 9vw, 90px);
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 .and {
     font-family: 'Playfair Display', serif;
-    font-size: 35px;
-    color: var(--cream);
-    margin: 8px 0;
+    font-size: 52px;
+    color: var(--soft);
+    margin: 4px 0;
 }
 
 .hero-date {
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: 12px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     line-height: 2;
+    color: var(--soft);
 }
 
 .hero-message {
     font-family: 'Playfair Display', serif;
-    font-size: 19px;
+    font-size: 24px;
     color: var(--soft);
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .scroll-link {
     display: inline-block;
-    margin-top: 35px;
-    color: var(--gold);
+    margin-top: 45px;
+    color: #9b6c48;
     font-size: 11px;
     letter-spacing: 3px;
     animation: bounce 2s infinite;
@@ -290,6 +286,14 @@ section {
     50% { transform: translateY(10px); }
 }
 
+/* COMMON SECTION BACKGROUNDS */
+
+#intro, #hero, #invitation, #countdown-section,
+#events, #venue, #contact, #closing {
+    background: var(--background);
+    color: #654b50;
+}
+
 /* INVITATION */
 
 #invitation {
@@ -297,26 +301,25 @@ section {
 }
 
 .invitation-text {
-    max-width: 650px;
+    max-width: 750px;
     margin: auto;
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    line-height: 1.7;
+    font-size: 25px;
+    line-height: 1.5;
     color: var(--soft);
 }
 
 .invitation-heart {
-    font-size: 30px;
-    color: var(--gold);
-    margin: 15px;
+    font-size: 32px;
+    color: #b77d82;
+    margin: 16px 0;
 }
 
 .family-name {
-    color: var(--gold);
+    color: #9b6c48;
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    margin-top: 22px;
-    line-height: 1.8;
+    font-size: 23px;
+    margin-top: 25px;
 }
 
 /* COUNTDOWN */
@@ -331,42 +334,46 @@ section {
     justify-content: center;
     gap: clamp(5px, 2vw, 16px);
     width: 100%;
-    max-width: 650px;
-    margin: auto;
 }
 
 .time-box {
     flex: 1 1 0;
     min-width: 0;
+    width: auto;
     padding: 20px 4px;
-    border: 1px solid #d9b56d80;
-    background: #ffffff08;
+    background: #ffffffa8;
+    border: 1px solid #c9a77c80;
+    box-shadow: 0 8px 24px #77534a0d;
 }
 
 .time-number {
     display: block;
-    color: var(--gold);
+    color: #9b6c48;
     font-family: 'Playfair Display', serif;
     font-size: clamp(25px, 7vw, 48px);
-    line-height: 1.3;
+    line-height: 1.15;
 }
 
 .time-label {
     font-family: 'Lato', sans-serif;
     font-size: clamp(8px, 2vw, 10px);
-    letter-spacing: 1px;
-    color: var(--soft);
+    letter-spacing: clamp(0.5px, 0.6vw, 2px);
     white-space: nowrap;
+    color: var(--soft);
 }
 
 .countdown-message {
-    margin-top: 25px;
+    margin-top: 30px;
     font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: 25px;
+    color: #9b6c48;
+    font-size: 38px;
 }
 
 /* EVENTS */
+
+#events {
+    background: var(--background);
+}
 
 .event-grid {
     display: grid;
@@ -377,51 +384,55 @@ section {
 }
 
 .event-card {
-    padding: 35px 20px;
+    padding: 40px 20px;
     text-align: center;
-    border: 1px solid #d9b56d80;
-    background: #ffffff08;
+    border: 1px solid #c9a77c80;
+    background: #ffffffa8;
+    box-shadow: 0 8px 24px #77534a0d;
     transition: .4s;
 }
 
 .event-card:hover {
     transform: translateY(-8px);
-    background: #ffffff12;
 }
 
 .event-icon {
-    font-size: 32px;
+    font-size: 35px;
     margin-bottom: 15px;
 }
 
 .event-card h3 {
-    color: var(--gold);
+    color: #9b6c48;
     font-family: 'Playfair Display', serif;
-    font-size: 23px;
+    font-size: 30px;
     margin-bottom: 12px;
 }
 
 .event-card p {
     font-size: 13px;
-    line-height: 1.9;
+    line-height: 2;
     color: var(--soft);
 }
 
 /* VENUE */
 
+#venue {
+    text-align: center;
+}
+
 .venue-name {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    color: var(--gold);
+    font-size: 35px;
     margin-bottom: 15px;
+    color: #9b6c48;
 }
 
 .venue-address {
     font-size: 14px;
     line-height: 2;
-    color: var(--soft);
     max-width: 600px;
     margin: auto;
+    color: var(--soft);
 }
 
 .venue-buttons {
@@ -435,36 +446,35 @@ section {
 .action-button {
     display: inline-block;
     padding: 14px 23px;
-    border: 1px solid var(--gold);
-    color: var(--soft);
+    border: 1px solid #a87968;
+    color: #805766;
     font-size: 11px;
     letter-spacing: 1px;
     transition: .3s;
 }
 
 .action-button:hover {
-    background: var(--gold);
-    color: var(--wine);
+    background: #a87968;
+    color: #fffaf5;
 }
 
 /* CONTACT */
 
-.contact-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin: 20px 0;
-    letter-spacing: 2px;
-    color: var(--gold);
+#contact {
+    text-align: center;
 }
 
-#contact p {
-    color: var(--soft);
-    line-height: 1.8;
+.contact-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    color: #9b6c48;
 }
 
 .contact-button {
     display: inline-block;
-    background: #641b38;
+    background: #8b5367;
     color: white;
     padding: 14px 30px;
     font-size: 12px;
@@ -473,33 +483,36 @@ section {
 }
 
 .contact-button:hover {
-    background: #9b4560;
+    background: #a66d7d;
 }
 
 /* CLOSING */
+
+#closing {
+    text-align: center;
+}
 
 .closing-text {
     max-width: 650px;
     margin: auto;
     font-family: 'Playfair Display', serif;
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 25px;
+    line-height: 1.5;
     color: var(--soft);
 }
 
 .closing-names {
     font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: clamp(35px, 7vw, 65px);
-    margin: 25px 0;
+    color: #9b6c48;
+    font-size: clamp(40px, 9vw, 85px);
+    margin: 30px 0;
 }
 
 footer {
     padding: 22px;
     text-align: center;
-    background: #200510;
-    color: #c9a979;
-    font-family: 'Lato', sans-serif;
+    background: #ead8cf;
+    color: #76565b;
     font-size: 10px;
     letter-spacing: 2px;
 }
@@ -520,34 +533,8 @@ footer {
 /* MOBILE */
 
 @media (max-width: 650px) {
-
     section {
-        padding: 65px 6%;
-    }
-
-    .hero-border {
-        inset: 12px;
-    }
-
-    .hero-top {
-        letter-spacing: 2px;
-    }
-
-    .hero-date {
-        letter-spacing: 1.5px;
-    }
-
-    .hero-small {
-        font-size: 15px;
-    }
-
-    .couple-name {
-        font-size: clamp(34px, 9vw, 52px);
-    }
-
-    .invitation-text {
-        font-size: 17px;
-        line-height: 1.6;
+        padding: 75px 7%;
     }
 
     .event-grid {
@@ -555,16 +542,37 @@ footer {
     }
 
     .time-box {
+        flex: 1 1 0;
+        min-width: 0;
         padding: 14px 2px;
+        background: #ffffffc9;
     }
 
     .time-number {
-        font-size: clamp(22px, 7.5vw, 34px);
+        font-size: clamp(23px, 7.5vw, 34px);
     }
 
     .time-label {
         font-size: 8px;
         letter-spacing: 0;
+    }
+
+    .hero-border {
+        inset: 12px;
+    }
+
+    .hero-top {
+        letter-spacing: 3px;
+    }
+
+    .hero-date {
+        letter-spacing: 2px;
+    }
+
+    .invitation-text,
+    .closing-text {
+        font-size: 21px;
+        line-height: 1.5;
     }
 
     .venue-buttons {
@@ -577,8 +585,9 @@ footer {
         max-width: 300px;
     }
 
-    .closing-text {
-        font-size: 16px;
+    .countdown {
+        flex-wrap: nowrap;
+        gap: 5px;
     }
 }
 
@@ -598,10 +607,7 @@ footer {
 
 <div id="intro">
     <div class="intro-content">
-
-        <div class="intro-caption">
-            A SPECIAL INVITATION
-        </div>
+        <div class="intro-caption">A SPECIAL INVITATION</div>
 
         <div class="envelope" id="envelope">
             <div class="envelope-label">With Love</div>
@@ -610,14 +616,12 @@ footer {
         <button class="open-button" onclick="openInvitation()">
             OPEN INVITATION
         </button>
-
     </div>
 </div>
 
 <!-- HERO -->
 
 <section id="hero">
-
     <div class="hero-border"></div>
 
     <div class="hero-content">
@@ -658,12 +662,9 @@ footer {
 <!-- INVITATION MESSAGE -->
 
 <section id="invitation">
-
     <div class="reveal">
 
-        <h2 class="section-title">
-            Together With Our Families
-        </h2>
+        <h2 class="section-title">Together With Our Families</h2>
 
         <div class="section-subtitle">
             A celebration of love and togetherness
@@ -691,12 +692,9 @@ footer {
 <!-- COUNTDOWN -->
 
 <section id="countdown-section">
-
     <div class="reveal">
 
-        <h2 class="section-title">
-            Counting Every Moment
-        </h2>
+        <h2 class="section-title">Counting Every Moment</h2>
 
         <div class="section-subtitle">
             Until the beautiful day
@@ -736,12 +734,9 @@ footer {
 <!-- WEDDING EVENTS -->
 
 <section id="events">
-
     <div class="reveal">
 
-        <h2 class="section-title">
-            The Celebration
-        </h2>
+        <h2 class="section-title">The Celebration</h2>
 
         <div class="section-subtitle">
             A day filled with love and happiness
@@ -789,12 +784,9 @@ footer {
 <!-- VENUE -->
 
 <section id="venue">
-
     <div class="reveal">
 
-        <h2 class="section-title">
-            The Wedding Venue
-        </h2>
+        <h2 class="section-title">The Wedding Venue</h2>
 
         <div class="section-subtitle">
             We can't wait to welcome you
@@ -843,7 +835,7 @@ footer {
 
         </div>
 
-        <p style="margin-top:25px;font-size:12px;line-height:1.8;color:#f3dfc5">
+        <p style="margin-top:25px;font-size:12px;line-height:1.8">
             Google Maps will calculate the distance and
             estimated travel time from your starting location.
         </p>
@@ -854,12 +846,9 @@ footer {
 <!-- CONTACT -->
 
 <section id="contact">
-
     <div class="reveal">
 
-        <h2 class="section-title">
-            For Any Enquiries
-        </h2>
+        <h2 class="section-title">For Any Enquiries</h2>
 
         <div class="section-subtitle">
             We are happy to help
@@ -891,18 +880,14 @@ footer {
         </a>
 
     </div>
-
 </section>
 
 <!-- CLOSING -->
 
 <section id="closing">
-
     <div class="reveal">
 
-        <h2 class="section-title">
-            Your Presence Means Everything
-        </h2>
+        <h2 class="section-title">Your Presence Means Everything</h2>
 
         <div class="closing-text">
 
@@ -923,12 +908,11 @@ footer {
 
         <div class="gold-line"></div>
 
-        <p style="letter-spacing:3px;font-size:11px;color:#e9d1ae">
+        <p style="letter-spacing:3px;font-size:11px;color:#9b6c48">
             25 NOVEMBER 2026 · 1:00 PM ONWARDS
         </p>
 
     </div>
-
 </section>
 
 <footer>
