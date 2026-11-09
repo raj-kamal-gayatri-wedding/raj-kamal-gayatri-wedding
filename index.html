@@ -445,6 +445,42 @@ section {
     color: white;
 }
 
+/* VENUE QR CODE */
+
+.venue-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.venue-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.venue-qr {
+    width: 115px;
+    max-width: 22%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .venue-layout {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .venue-qr {
+        width: 100px;
+        max-width: 45%;
+    }
+}
+
 /* CONTACT */
 
 #contact {
@@ -761,63 +797,77 @@ footer {
 
     <div class="reveal">
 
-        <h2 class="section-title">
-            The Wedding Venue
-        </h2>
+        <div class="venue-layout">
 
-        <div class="section-subtitle">
-            We can't wait to welcome you
-        </div>
+            <div class="venue-info">
 
-        <div class="venue-name">
-            Aarunya Country Resort
-        </div>
+                <h2 class="section-title">
+                    The Wedding Venue
+                </h2>
 
-        <div class="gold-line"></div>
+                <div class="section-subtitle">
+                    We can't wait to welcome you
+                </div>
 
-        <div class="venue-address">
-            Athabari Polytechnic Road,
-            <br>
-            Maijan Borsaikia Gaon,
-            <br>
-            Mohanabari – 786012
-        </div>
+                <div class="venue-name">
+                    Aarunya Country Resort
+                </div>
 
-        <div class="venue-buttons">
+                <div class="gold-line"></div>
 
-            <a
-                class="action-button"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012"
+                <div class="venue-address">
+                    Athabari Polytechnic Road,
+                    <br>
+                    Maijan Borsaikia Gaon,
+                    <br>
+                    Mohanabari – 786012
+                </div>
+
+                <div class="venue-buttons">
+
+                    <a
+                        class="action-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012"
+                    >
+                        📍 GET DIRECTIONS
+                    </a>
+
+                    <a
+                        class="action-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.google.com/maps/search/?api=1&query=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012"
+                    >
+                        🗺 VIEW ON GOOGLE MAPS
+                    </a>
+
+                    <a
+                        class="action-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012&travelmode=driving"
+                    >
+                        🚗 FIND DISTANCE & TRAVEL TIME
+                    </a>
+
+                </div>
+
+                <p style="margin-top:18px;font-size:11px;line-height:1.7">
+                    Google Maps will calculate the distance and
+                    estimated travel time from your starting location.
+                </p>
+
+            </div>
+
+            <img
+                class="venue-qr"
+                src="qr-code.jpg"
+                alt="Wedding venue QR code"
             >
-                📍 GET DIRECTIONS
-            </a>
-
-            <a
-                class="action-button"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.google.com/maps/search/?api=1&query=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012"
-            >
-                🗺 VIEW ON GOOGLE MAPS
-            </a>
-
-            <a
-                class="action-button"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.google.com/maps/dir/?api=1&destination=Aarunya+Country+Resort%2C+Athabari+Polytechnic+Road%2C+Maijan+Borsaikia+Gaon%2C+Mohanabari+786012&travelmode=driving"
-            >
-                🚗 FIND DISTANCE & TRAVEL TIME
-            </a>
 
         </div>
-
-        <p style="margin-top:18px;font-size:11px;line-height:1.7">
-            Google Maps will calculate the distance and
-            estimated travel time from your starting location.
-        </p>
 
     </div>
 
